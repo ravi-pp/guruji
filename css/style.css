@@ -1,0 +1,98 @@
+/* Vedic Theme - saffron/orange gradients, subtle starry background */
+:root{
+  --saffron:#f2994a;
+  --deep-saffron:#f28e1c;
+  --ext-saffron:#ffd7ae;
+  --accent:#b35600; /* contrast for text */
+  --bg:#fff8f0;
+  --dark-text:#2b2b2b;
+  --muted:#6b6b6b;
+}
+
+/* Global */
+body{font-family: 'Hind', sans-serif; background:var(--bg); color:var(--dark-text); line-height:1.6;}
+h1,h2,h3{font-family:'Merriweather', serif; font-weight:700;color:var(--accent)}
+.container{max-width:1100px}
+
+/* Skip link */
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus, .sr-only-focusable:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.5rem 1rem;z-index:999;}
+
+/* Header */
+.navbar{background:linear-gradient(90deg, rgba(242,142,28,0.98), rgba(242,153,74,0.98));}
+.navbar .navbar-brand .brand-text{font-weight:600; color:#fff; font-family: 'Merriweather', serif;}
+.navbar .nav-link{color:#fff}
+.navbar .btn-outline-light{border-color:#fff;color:#fff}
+
+/* Hero */
+.hero{min-height:70vh; background-image: radial-gradient(ellipse at 10% 10%, rgba(255,255,255,0.06), transparent), linear-gradient(0deg, #e7cc1f69, transparent), url('../assets/images/hero-stars.svg');
+  background-size:cover; background-position:center; padding:5rem 0;}
+.hero h1{font-size:2.4rem; color:#fff;}
+.hero .lead{color:#fff; opacity:0.95}
+.hero .zodiac-row .zodiac{background:rgba(255,255,255,0.08); padding:.45rem .8rem; border-radius:0.45rem; color:#fff}
+.hero .btn-primary{background:var(--dark-text); border:none}
+.hero .btn-warning{background:var(--accent); border:none}
+.hero-card img{max-width:420px;border:7px solid rgba(255,255,255,0.06);}
+
+/* Hero Carousel Slides */
+.hero-slide{min-height:70vh; display:flex; align-items:center; background-size:cover; background-position:center;}
+.hero-overlay{background:linear-gradient(90deg, rgba(11,6,2,0.45), rgba(11,6,2,0.15)); color:#fff; padding:4rem 2rem; max-width:720px;}
+
+/* Solar loader styles */
+.solar-loader{position:fixed; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:1080; background:linear-gradient(180deg, rgba(18,7,2,0.85), rgba(18,7,2,0.65)); color:#fff;}
+.solar-loader .sun{animation:solar-spin 3s linear infinite;}
+.solar-loader .loader-text{margin-top:1rem; font-weight:600; color:var(--ext-saffron);}
+
+@keyframes solar-spin{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
+}
+
+/* Ensure carousel controls are visible on saffron backgrounds */
+.carousel-control-prev-icon, .carousel-control-next-icon{filter:invert(1) hue-rotate(20deg) saturate(0.6);}
+
+/* Services */
+.service-icon{font-size:2rem}
+.service-card{border-radius:.6rem;background:linear-gradient(180deg, #fff,#fff);}
+.card{border:none}
+
+/* Testimonials */
+.testimonials blockquote{font-style:italic; color:var(--muted);}
+
+/* Contact */
+.form-label{color:var(--dark-text)}
+
+/* Footer */
+.site-footer{background:linear-gradient(90deg, #b35600, #8b3b00);}
+.site-footer a{color:#fff}
+
+/* Small screens */
+@media (max-width:767px){
+  .hero h1{font-size:1.75rem}
+}
+
+/* Focus styles for accessibility */
+:focus{outline:4px solid rgba(242,142,28,0.6); outline-offset:3px}
+
+/* Decorative star background image to simulate subtle stars in header */
+/* Using SVG data URI: create minimal dotted stars */
+body{background-image:linear-gradient(180deg, rgba(255,239,230,0.5), rgba(255,245,237,1)); background-repeat:repeat;}
+
+/* Ensure high contrast between card backgrounds & text */
+.bg-light{background-color:#fff !important}
+
+/* Misc */
+.zodiac{font-family:'Merriweather', serif;}
+
+/* Responsive grid spacing */
+@media(min-width:992px){
+  .hero{padding-top:7rem;padding-bottom:7rem}
+}
+
+/* Book Puja cards */
+.book-puja .puja-card{border-radius:.6rem; transition:transform .18s ease, box-shadow .18s ease;}
+.book-puja .puja-card:hover, .book-puja .puja-card:focus-within{transform:translateY(-6px); box-shadow:0 8px 22px rgba(11,6,2,0.12);}
+.book-puja .puja-card .card-body h3{color:var(--dark-text); margin-bottom:.25rem}
+.book-puja .puja-card .card-body p{margin-bottom:.5rem}
+.book-puja .btn-book-puja{min-width:72px}
+@media (max-width:575px){.book-puja .puja-card .card-body{padding:.9rem}}

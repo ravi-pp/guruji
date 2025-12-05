@@ -1,0 +1,9 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600' preserveAspectRatio='xMidYMid slice'>
+  <rect width='100%' height='100%' fill='#fff4eb' />
+  <g transform='translate(40,40)'>
+    <circle cx='260' cy='160' r='120' fill='#f9d29b'/>
+    <rect x='180' y='300' width='180' height='160' rx='20' fill='#f6c380'/>
+    <circle cx='260' cy='160' r='18' fill='rgba(0,0,0,0.12)'/>
+    <path d='M 200 430 q 60 -40 120 0' stroke='rgba(0,0,0,0.12)' fill='none' stroke-width='6'/>
+  </g>
+</svg>
